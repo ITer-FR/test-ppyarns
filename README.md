@@ -16,6 +16,9 @@ Nous nous rejoindrons sur le serveur discord d'ITer, salon vocal Harry Potter à
 
 Une fois 15h00, vous devrez avoir pushé votre travail au plus tard à 15h00. Tout push réalisé après 15h00 ne sera pas pris en coimpte et sera éliminatoire si il est le seul présent).
 
+## BONUS : 
+Tu te sens l'âme d'un champion, alors je vais te lancer un défi. Essaye de coder ce jeu sans faire appel à des conditons, donc pas de if, else, whil etc... Uniquement de l'algo, et que de l'ago. Alors y arriveras-tu?
+
 ## ATTENTION !
 Pour réaliser ce test, vous devrez cloner ce repo. Toutefois pour ne pas avoir à tout mélanger et casser le travail d'un camarade, vous devrez créer une branche à votre nom et prénom soit <toto-lartichaut>. Une fois la branche créée, je vous conseil vivement de pushé tout de suite une première fois afin d'être sure qu'il n'y ai pas d'erreur.
 
