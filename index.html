@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<h2>Papier feuille ciseaux, ou Chi fu mi ! </h2>
+<script>
+    function computerPlay() {
+        const gameElems = ["pierre", "papier","ciseaux"]
+        let selectIndex = randomGenerator(3)
+        return gameElems[selectIndex]
+    }
+    // générer un nombre random
+    function randomGenerator(rangeEnd) {
+        return Math.round(Math.random() * 10) % rangeEnd
+    }
+
+    // Condition pour comparer les différentes saisies
+    function playRound(userChoice, computerChoice) {
+
+        if(userChoice.toLowerCase() === "pierre" && computerChoice === "ciseaux"){
+            console.log("Vous avez gagné! LA pierre bat les ciseaux")
+            return 1
+        }
+
+        else if(userChoice.toLowerCase() === "pierre" && computerChoice === "papier"){
+            console.log("Vous avez perdu! le papier bat la pierre")
+            return -1
+        }
+
+        else if(userChoice.toLowerCase() === "pierre" && computerChoice === "pierre") {
+            console.log(`C'est une égalité, rejouer !`)
+            return 0
+        }
+
+        else if(userChoice.toLowerCase() === "papier" && computerChoice === "pierre") {
+            console.log("Vous avez gagné! Le papier bat la pierre")
+            return 1
+        }
+
+        else if(userChoice.toLowerCase() === "papier" && computerChoice === "ciseaux"){
+            console.log("Vous avez perdu! Les ciseaux bat le papier")
+            return -1
+        }
+
+        else if(userChoice.toLowerCase() === "papier" && computerChoice === "papier") {
+            console.log("It is a tie! Keep on trying.")
+            return 0
+        }
+
+        else if(userChoice.toLowerCase() === "ciseaux" && computerChoice === "pierre") {
+            console.log("Vous avez perdu! Le caillou bat les ciseaux")
+            return -1
+        }
+
+        else if(userChoice.toLowerCase() === "ciseaux" && computerChoice === "papier") {
+            console.log("Vous avez gagné ! Les ciseaux gagne contre le papier")
+            return 1
+        }
+
+        else if(userChoice.toLowerCase() === "ciseaux" && computerChoice === "ciseaux") {
+            console.log(`C'est une égalité, rejouer!`)
+            return 0
+        }      else{
+            console.log("Saisi invalide");
+        }
+    }
+
+
+    const numberOfGames = 3
+    const computerSelection = computerPlay()
+
+    // La fonction qui lance le jeu
+    function gameLaunch() {
+        let score = 0
+        let userScore = 0
+        let computerScore = 0
+        let tieScore = 0
+
+        for(let i = 0; i < numberOfGames; i++) {
+
+            let userChoice = prompt("Entre votre choix parmis: pierre, ciseaux et papier")
+            let computerChoice = computerPlay()
+            score = playRound(userChoice,computerChoice)
+
+            if(score > 0)
+                ++playerScore
+            if(score === 0)
+                ++tieScore
+            if(score < 0)
+                ++computerScore
+
+        }
+        let resultArr = [userScore, computerScore, tieScore]
+        return resultArr
+    }
+
+    // on affiche le résultat
+    function printResult (score) {
+
+        let str;
+        console.log(`Utilisateur: ${score[0]} et l'ordinateur: ${score[1]}`)
+        score[0] - score[1] > 0 ?  str = "L'utilisateur gagne" : score[0] === score[1] ? str = `C'est une égalité` : str = `L'ordinateur gagne`
+        console.log(str)
+    }
+    printResult(gameLaunch())
+</script>
+</body>
