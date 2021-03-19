@@ -1,0 +1,14 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 25vh;
+    height: 25vh;
+    margin-bottom: 2vh;
+    border-radius: 50%;
+    background-color: rgb(160, 160, 236);
+}
