@@ -22,7 +22,7 @@ Tu te sens l'âme d'un champion, alors je vais te lancer un défi. Essaye de cod
 ## ATTENTION !
 Pour réaliser ce test, vous devrez cloner ce repo. Toutefois pour ne pas avoir à tout mélanger et casser le travail d'un camarade, vous devrez créer une branche à votre nom et prénom soit <toto-lartichaut>. Une fois la branche créée, je vous conseil vivement de pushé tout de suite une première fois afin d'être sure qu'il n'y ai pas d'erreur.
 
-Bien entendu vous avez internet ouvert donc chacun est libre d'aller chercher les ressources qui lui serviront, toutefois, je vais vérifier les codes de chacun, et aussi en parallèle rechercher ce qu'il existe comme tuto, aide ou exemple sur internet. DOnc éviter le copié collé be. 
+Bien entendu vous avez internet ouvert donc chacun est libre d'aller chercher les ressources qui lui serviront, toutefois, je vais vérifier les codes de chacun, et aussi en parallèle rechercher ce qu'il existe comme tuto, aide ou exemple sur internet. Donc éviter le copié collé be. 
 
 Je vous demanderais donc de commenter au maximum les étapes de votre code.
 
