@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<h2>Papier feuille ciseaux, ou Chi fu mi ! Avec matrice </h2>
+<script>
+    /* saisie utilisateur */
+    let userChoice = prompt('Entre votre choix parmis: pierre, ciseaux et papier');
+
+    /* convertir l'entrée de l'utilisateur en index */
+    userChoice = userChoice.toLowerCase();
+    let choiceStack = ['papier', 'pierre', 'ciseaux'];
+    let userChoiceIndex = choiceStack.indexOf(userChoice);
+
+    /* générer le choix de l'ordinateur */
+    let randomNum = Math.floor(Math.random() * 3);
+    let computerChoice = choiceStack[randomNum];
+
+    /* enregistrer chaque choix sur la console */
+    console.log(`Votre choix : ${userChoice}, Le choix de l'ordinateur est : ${computerChoice}.`);
+
+    /* matrice avec V pour victoire, E pour égalité et P pour perdu */
+    const results = [
+        ['e', 'p', 'v'],
+        ['v', 'e', 'p'],
+        ['p', 'v', 'e'],
+    ];
+
+    /* utiliser l'index userChoice (parce qu'en fin de compte nous avons juste besoin du résultat de l'utilisateur) pour trouver le résultat dans ce tableau à deux dimensions */
+    let userResult = results[randomNum][userChoiceIndex];
+
+    /* créer un objet pour convertir le résultat final en une phrase, afin que nous puissions l'enregistrer sur la console. */
+    const resultMap = {
+        'e': "Egalité!",
+        'v': "Vous avez gagné!",
+        'p': "Vous avez perdu!"
+    };
+    console.log(resultMap[userResult]);
+</script>
+</body>
