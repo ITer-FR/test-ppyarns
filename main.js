@@ -1,10 +1,53 @@
+// Loop to know if won or lost called while clicking button
+
+function determinateWinner() {
+    const myScore = localStorage.getItem('score')
+    const ennemyScore = localStorage.getItem('ennemyScore')
+    if (myScore === 0 && ennemyScore ===  1) {
+        console.log('You lose : Shi vs Fu')
+        localStorage.clear()
+    } else if ( myScore === 0 && ennemyScore === 2 ) {
+        console.log('You win : Shi vs Mi')
+        localStorage.clear()
+    } else if ( myScore === 0 && ennemyScore === 0 ) {
+        console.log('equality, play another round !')
+        playAgainEquality();
+    } else if ( myScore === 1 && ennemyScore === 1 ) {
+        console.log('equality, play another round !')
+        playAgainEquality();
+    } else if ( myScore === 1 && ennemyScore === 2) {
+        console.log('You lose : Fu vs Mi')
+    } else if ( myScore === 1 && ennemyScore === 0) {
+        console.log('You win : Fu vs Shi')
+    } else if ( myScore === 2 && ennemyScore === 1) {
+        console.log('You lose : Mi vs Fu')
+    } else if ( myScore === 2 && ennemyScore === 2) {
+        console.log('equality, play another round !')
+        playAgainEquality();
+    } else if ( myScore === 2 && ennemyScore === 0) {
+        console.log('You win : Fu vs Shi')
+    }
+}
+
+document.getElementById('validateButton').addEventListener('click', function() {
+    determinateWinner();
+})
+
+// Starts another game to determine the winner of the round
+
+function playAgainEquality() {
+
+}
+
+// listeners on divs to play, "computer" will automatically play from math.random
+
 document.getElementById('Shi').addEventListener('click', function(a) {
     localStorage.setItem('score', 0);
     console.log('shi')
         // 0 = Shi ; 1 = Fu ; 2 = Mi : Mi beats Fu beats Shi beats Mi.
-    localStorage.setItem('ennemyScore', Math.floor(Math.random() * 3))
+    localStorage.setItem('ennemyScore', Math.floor(Math.random() * 3));
     
-    determinateWinner()
+    determinateWinner();
 
 })
 
@@ -24,21 +67,3 @@ document.getElementById('Mi').addEventListener('click', function(a) {
 
 })
 
-function determinateWinner() {
-    const myScore = localStorage.getItem('score')
-    const ennemyScore = localStorage.getItem('ennemyScore')
-    if (myScore === 0 && ennemyScore ===  1) {
-        console.log('You lose : Shi vs Fu')
-        localStorage.clear()
-    } else if ( myScore === 0 && ennemyScore === 2 ) {
-        console.log('You win : Shi vs Mi')
-        localStorage.clear()
-    } else if ( myScore === 0 && ennemyScore === 0 ) {
-        console.log('equality, play another round !')
-        playAgainEquality();
-    }
-}
-
-function playAgainEquality() {
-
-}
