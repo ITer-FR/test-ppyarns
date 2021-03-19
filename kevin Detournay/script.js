@@ -7,9 +7,15 @@ const app={
     init: ()=>{
 
     console.log('init !')
-
+        //get random number
       const random = app.getRandomNumber(1,3)
-      const computeurValue=app.getComputerValue(random)        
+      // get computeur value
+      const computeurValue=app.getComputerValue(random)
+   
+
+      
+        //drawing form
+
         const root = document.getElementById('root')
         const form = document.createElement('form')
         const input = document.createElement('input')
@@ -26,7 +32,9 @@ const app={
             e.preventDefault()
             const playerInput = form.querySelector('.playerInput').value
             console.log(playerInput)
-          getPlayerValue()
+             //get playerValue
+
+      return playerValue =app.getPlayerValue(playerInput)
             
             
             
@@ -49,7 +57,7 @@ const app={
         default :
             return(computeur= 'ciseaux')        
             }
-      }
+      },
 
       getPlayerValue:(playerInput)=>{
         switch(playerInput){
