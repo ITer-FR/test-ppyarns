@@ -4,28 +4,30 @@ function determinateWinner() {
     const myScore = localStorage.getItem('score')
     const ennemyScore = localStorage.getItem('ennemyScore')
     if (myScore === 0 && ennemyScore ===  1) {
-        console.log('You lose : Shi vs Fu')
+        alert('You lose : Shi vs Fu')
         localStorage.clear()
     } else if ( myScore === 0 && ennemyScore === 2 ) {
-        console.log('You win : Shi vs Mi')
+        alert('You win : Shi vs Mi')
         localStorage.clear()
     } else if ( myScore === 0 && ennemyScore === 0 ) {
-        console.log('equality, play another round !')
+        alert('equality, play another round !')
         playAgainEquality();
     } else if ( myScore === 1 && ennemyScore === 1 ) {
-        console.log('equality, play another round !')
+        alert('equality, play another round !')
         playAgainEquality();
     } else if ( myScore === 1 && ennemyScore === 2) {
-        console.log('You lose : Fu vs Mi')
+        alert('You lose : Fu vs Mi')
     } else if ( myScore === 1 && ennemyScore === 0) {
-        console.log('You win : Fu vs Shi')
+        alert('You win : Fu vs Shi')
     } else if ( myScore === 2 && ennemyScore === 1) {
-        console.log('You lose : Mi vs Fu')
+        alert('You lose : Mi vs Fu')
     } else if ( myScore === 2 && ennemyScore === 2) {
-        console.log('equality, play another round !')
+        alert('equality, play another round !')
         playAgainEquality();
     } else if ( myScore === 2 && ennemyScore === 0) {
-        console.log('You win : Fu vs Shi')
+        alert('You win : Fu vs Shi')
+    } else {
+        console.log('anythingToTest')
     }
 }
 
