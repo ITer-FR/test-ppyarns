@@ -38,7 +38,8 @@ document.getElementById('validateButton').addEventListener('click', function() {
 // Starts another game to determine the winner of the round
 
 function playAgainEquality() {
-
+    localStorage.clear();
+    console.log('Equality, another round to be played will begin on your marks !')
 }
 
 // listeners on divs to play, "computer" will automatically play from math.random
